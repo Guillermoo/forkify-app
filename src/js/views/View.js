@@ -17,9 +17,6 @@ export default class View {
   }
 
   update(data) {
-    // if (!data || (Array.isArray(data) && data.length === 0))
-    //   return this.renderError();
-
     this._data = data;
 
     //Clonamos todo el markup creado.
@@ -36,7 +33,6 @@ export default class View {
         !newEl.isEqualNode(curEl) &&
         newEl.firstChild?.nodeValue.trim() !== '' //Solo funciona si el nodo tiene solo texto
       ) {
-        //console.log(newEl);
         curEl.textContent = newEl.textContent;
       }
 

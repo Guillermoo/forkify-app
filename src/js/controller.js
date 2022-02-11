@@ -31,8 +31,6 @@ const controlRecipes = async function () {
     await model.loadRecipe(id); //model cambia el estado de recipe
     // 3) rendering recipe
     recipeView.render(model.state.recipe);
-
-    //recipeContainer.insertAdjacentHTML = ('afterbegin', markup);
   } catch (err) {
     recipeView.renderError();
   }
@@ -71,7 +69,6 @@ const controlServings = function (newServings) {
   model.updateServings(newServings);
 
   // Update the recipe view
-  //recipeView.render(model.state.recipe);
   recipeView.update(model.state.recipe);
 };
 
